@@ -557,7 +557,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 1200px;
     margin: var(--section-spacing) auto;
     background-color: var(--white);
     padding: 40px;
@@ -628,7 +628,6 @@ body {
 
 .client-card {
     text-align: center;
-    max-width: 150px;
 }
 
 .client-card .image-container {
@@ -638,7 +637,6 @@ body {
 
 .client-card img {
     width: 100%;
-    border-radius: 50%;
 }
 
 .client-card .play-button {
@@ -656,10 +654,7 @@ body {
     cursor: pointer;
 }
 
-.client-card img {
-    width: 100%;
-    border-radius: 50%;
-}
+
 
 .client-name {
     font-weight: bold;
