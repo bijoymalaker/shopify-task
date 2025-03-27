@@ -123,41 +123,73 @@ body {
 /* Hero part  */
 
 .container {
-    width: 90%; /* Adjust for mobile responsiveness */
+    width: 90%;
     max-width: 1200px;
-    margin: 20px auto; /* Reduced margin for smaller screens */
+    margin: 20px auto;
     display: flex;
-    
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column; /* Stack sections on small screens */
+    align-items: center;
 }
 
 .left-section, .right-section {
-    flex: 1 1 100%; /* Take full width on small screens */
-    padding: 10px; /* Reduced padding for smaller screens */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-
-
-.poster .poster-item{
-    width: 48%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* .poster img {
     width: 100%;
-    display: block;
-} */
-
-
-.poster-item {
-    position: relative;
-    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text for mobile */
 }
+
+.title {
+    font-size: 48px; /* Adjusted for mobile readability */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.title .gradient-text{
+  background: linear-gradient(to right, #2B034D, #EF90FF);
+  background: -webkit-linear-gradient(to right, #2B034D, #EF90FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column; /* Stack buttons on small screens */
+    gap: 10px;
+}
+
+.button {
+    width: 100%; /* Make buttons full-width on mobile */
+    padding: 10px;
+    text-align: center;
+}
+
+.poster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.poster .poster-item {
+    width: 90%; /* Adjust width for mobile */
+    max-width: 350px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .play-button {
     position: absolute;
     top: 50%;
@@ -167,62 +199,61 @@ body {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
     cursor: pointer;
-}
-.play-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.poster img {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-}
-
-.title {
-    font-size: 1.8em; /* Reduced font size for smaller screens */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1em; /* Reduced font size for smaller screens */
-    color: #888;
-    margin-bottom: 15px;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap; /* Wrap buttons on small screens */
-}
-
-
-
-.button.get-started {
-    background-color: purple;
-}
-
-.button.book-demo {
-    background-color: lightgrey;
-    color: #333;
 }
 
 .social-channels {
     background-color: white;
-    padding: 15px; /* Reduced padding for smaller screens */
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .social-channels img {
-    width: 25px; /* Reduced icon size for smaller screens */
-    margin: 0 5px; /* Reduced margin for smaller screens */
+    width: 22px; /* Make icons smaller on mobile */
+    margin: 0 4px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .left-section, .right-section {
+        width: 48%;
+        text-align: left;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .button {
+        width: auto;
+    }
+
+    .poster {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .poster .poster-item {
+        width: 48%;
+    }
+
+    .social-channels img {
+        width: 30px;
+        margin: 0 6px;
+    }
 }
 
 
@@ -950,4 +981,6 @@ body {
     .poster {
         width: 100%; /* Full width on small screens */
     }
+    
+    
 }
